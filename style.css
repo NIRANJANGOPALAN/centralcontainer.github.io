@@ -170,21 +170,50 @@ h3 {
     }
 }
 /* ------------------------- */
-
 .logo-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
+    background-color: white;
 }
-@media (max-width: 768px) {
-    .logo-container {
-        flex-direction: column;
+
+.main-logo {
+    margin-bottom: 20px;
+}
+
+.secondary-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-group {
+    margin-bottom: 20px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.logo-group img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .secondary-logos {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
+    .logo-group {
+        margin: 10px;
+    }
 }
+
 
 
 
@@ -315,38 +344,7 @@ p {
     text-decoration: underline;
 }
 
-#contact-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
 
-#contact-form input,
-#contact-form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#contact-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-#contact-form button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#contact-form button:hover {
-    background-color: #0056b3;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
